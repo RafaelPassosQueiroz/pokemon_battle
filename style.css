@@ -1,0 +1,273 @@
+/*body {
+    margin: 0;
+    background-image: url("https://i.pinimg.com/736x/36/84/d7/3684d769ff867b1efb8110ec2676cc99.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+h1{
+    color: white; text-align: center;
+}
+#pok_pla{
+    margin-top: 22%;
+    margin-left: 20%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#pok_adv{
+    margin-top: 22%;
+    margin-left: 30%;
+    padding: 10px;
+    font-size: 16px;
+}
+*/
+#battle {
+    top: 100px;
+    left: 45%;
+    padding: 10px 40px;
+    font-size: 24px;
+    font-family: "Pixelify Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    background-color: #ff1f1f;
+    
+    border: 4px solid #333; 
+    border-radius: 30px;
+    cursor: pointer;
+    
+    box-shadow: 0 6px 0 #b30000, 0 8px 15px rgba(0, 0, 0, 0.4);
+    
+    transition: all 0.1s ease;
+    position: absolute;
+}
+
+#battle:hover {
+    background-color: #ff4d4d;
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 0 #b30000, 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+#battle:active {
+    transform: translateY(4px); 
+    box-shadow: 0 2px 0 #b30000, 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#battle::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 10%;
+    width: 80%;
+    height: 20%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    position: relative;
+    text-align: center;
+    background-repeat: repeat-x;
+    background-image: url(https://i.pinimg.com/736x/36/84/d7/3684d769ff867b1efb8110ec2676cc99.jpg);
+    background-size: 60%;
+    background-color: rgb(127, 172, 113);
+    font-family: pixelifysans, sans-serif;
+
+}
+h1{
+    position: absolute;
+    top: 0;
+    font-family: Roboto, sans-serif;
+    left: 40%;
+    color: rgb(255, 225, 0);
+    font-size: 37px;
+    margin: 1px;
+    background-color: blue;
+    top: 5%;
+    
+}
+
+
+#player1{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+.divs{ /*Player 1*/
+    position: absolute;
+    top: 250px;
+    left: 17%;
+
+
+}
+#inputss{/*Player 1*/
+    background-color: rgba(255, 210, 106, 1);
+    position: absolute; 
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+#divs{/*Player 2*/
+    position: absolute;
+    top: 250px;
+    left: 67%;
+
+}
+#inputs{/*Player 2*/
+    background-color: rgba(255, 210, 106, 1);
+    position: absolute; 
+    padding:20px;
+    font-size: 16px;
+
+    border-radius: 10px;
+}
+input::placeholder {
+    font-family: pixelifysans, sans-serif;
+    font-size: 18px;                 /* Define o tamanho */
+    color: #4e4a4a;                     /* Define a cor */
+    font-style: italic;              /* Estilo da fonte */
+  }
+
+#imgss{
+    width: 200px;
+    height: 200px;
+    visibility:hidden;
+
+}
+.menu{
+    position:static;
+    left: 60%;
+    width:40%;
+    margin-top: 28.5%;
+    margin-left: 50%;
+
+}
+
+#imgs{
+    height: 200px;
+    width: auto;
+    visibility: hidden;
+
+}
+
+#menu{
+    position: absolute;
+    background-color: #dedede;
+    width: 650px;
+    height: 270px;
+    top: 425px;
+    left: 450px;
+    border: 3px solid black;
+    
+}
+#menu2{
+    position: absolute;
+    background-color: #dedede;
+    width: 650px;
+    height: 270px;
+    top: 420px;
+    left: 445px;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+
+
+
+.bmenu{
+    background-color: rgb(247, 119, 119);
+    position: absolute;
+    top: 450px;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer; /* Adicionado para parecer um botão clicável */
+    border-radius: 45px;
+    right: 770px;
+    
+    /* A BORDA DO TEXTO AQUI: */
+    text-shadow: 
+        -2.5px -2.5px 0 #000,  
+        2.5px -2.5px 0 #000,
+        -2.5px  2.5px 0 #000,
+        2.5px  2.5px 0 #000;
+
+}
+
+.b2menu{
+    background-color: rgb(238, 220, 102);
+    position: absolute;
+    top: 450px;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer; /* Adicionado para parecer um botão clicável */
+    border-radius: 45px;
+    right: 450px;
+    
+    /* A BORDA DO TEXTO AQUI: */
+    text-shadow: 
+        -2.5px -2.5px 0 #000,  
+        2.5px -2.5px 0 #000,
+        -2.5px  2.5px 0 #000,
+        2.5px  2.5px 0 #000;
+}
+
+.b3menu{
+    background-color: rgb(136, 198, 138);
+    position: absolute;
+    top: 580px;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer; /* Adicionado para parecer um botão clicável */
+    border-radius: 45px;
+    right: 770px;
+    
+    /* A BORDA DO TEXTO AQUI: */
+    text-shadow: 
+        -2.5px -2.5px 0 #000,  
+        2.5px -2.5px 0 #000,
+        -2.5px  2.5px 0 #000,
+        2.5px  2.5px 0 #000;
+}
+
+
+.b4menu{
+    background-color: rgb(94, 158, 192);
+    position: absolute;
+    top: 580px;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer; /* Adicionado para parecer um botão clicável */
+    border-radius: 45px;
+    right: 450px;
+    
+    /* A BORDA DO TEXTO AQUI: */
+    text-shadow: 
+        -2.5px -2.5px 0 #000,  
+        2.5px -2.5px 0 #000,
+        -2.5px  2.5px 0 #000,
+        2.5px  2.5px 0 #000;
+}
+
+

@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    position: relative;
+    text-align: center;
+    background-repeat: repeat-x;
+    background-image: url(https://i.pinimg.com/736x/36/84/d7/3684d769ff867b1efb8110ec2676cc99.jpg);
+    background-size: 60%;
+    background-color: rgb(127, 172, 113);
+    font-family: pixelifysans, sans-serif;
+    flex-direction: column;
+
+}
+.tcgs{
+    margin-top: 50%;
+    height: 320px;
+    position: relative;
+    left: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+#main_img{
+    position: absolute;
+    top: 140px;
+    left: 430px;
+    height: 150px;
+}
+
+#back{
+    position: absolute;
+    top: -30px;
+    left: 15%;
+    width: 540px;
+}
+
+#back_div{
+    width: 14%;
+    margin-left: 68%;
+    height: 300px;
+    margin-top: 35px;
+
+}
+.inf {
+    border: 3.5px solid black;
+    width: 195px;
+    height: 283px;
+    position: absolute; /* Torna o elemento posicionado em relação ao pai */
+    top: 5px;
+    left: 1040px;
+    vertical-align: bottom;
+}
+#img_info{
+    margin-top: -10px;
+    height: 90px;
+}
+.info{
+    margin-top: 140px;
+    margin-left: 65px;
+    font-family: 'Pixelify Sans', sans-serif;
+    line-height: 1.5;
+    position: absolute;
+}
+.pokemon{
+    font-family: 'Pixelify Sans', sans-serif;
+
+}
+
+.gp_container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 70px;
+    margin-top: 60px;
+    max-width: 1400px;
+
+}
+.golpes {
+    background-color: #F8D030;
+    width: 300px;
+    margin-top: 30px;
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Espaça os itens horizontalmente */
+    padding: 10px; /* Adiciona espaçamento interno */
+    height: 200px;  
+    text-align: center;
+}
+
+.check {
+    position: relative; /* Remove o position absolute */
+    margin-right: 10px; /* Espaçamento entre a checkbox e o nome */
+    accent-color: #0c0d0d;
+    height: 30px; /* Adjust size as needed */
+    width: 30px;  /* Adjust size as needed */
+}
+
+.golpes h3 {
+    flex-grow: 1; /* Faz o nome do golpe ocupar o espaço restante */
+    text-align: center; /* Garante alinhamento à esquerda */
+    margin-top: 0; /* Remove margens padrão */
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 30px;
+    margin-left: 10px;
+    
+
+}
+
+.dmg_class {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px; /* Espaçamento entre o nome e o ícone */
+}
+.info_golpe{
+align-items: center;
+display: flex; /* Transforma a div em um contêiner flexível */
+flex-direction: row; /* Garante o alinhamento horizontal (padrão) */
+justify-content: center; /* (Opcional) Centraliza horizontalmente */
+gap: 10px; /* (Opcional) Adiciona espaçamento entre os elementos */
+margin-left: -300px;
+  
+}
