@@ -29,16 +29,12 @@ async function buscarNaTCG() {
         const resposta = await fetch(URL_TCG);
         const listaDeCartas = await resposta.json();
 
-        // 1. Filtramos primeiro para ter certeza que todas na lista têm imagem
         const cartasComImagens = listaDeCartas.filter(c => c.image);
 
         if (cartasComImagens.length > 0) {
 
             const cartasDisponiveis = [...cartasComImagens];
 
-            // 2. GERAR O NÚMERO ALEATÓRIO (O SEGREDO!)
-            // Math.random() gera entre 0 e 0.99
-            // Multiplicamos pelo tamanho da lista e arredondamos para baixo com Math.floor
             const randomId1 = Math.floor(Math.random() * cartasDisponiveis.length);
             cartasDisponiveis.splice(randomId1, 1)[0];
 

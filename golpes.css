@@ -66,57 +66,99 @@ body {
 
 }
 
-.gp_container{
+.gp_container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 70px;
-    margin-top: 60px;
+    justify-content: center;
+    gap: 20px;
+    margin: 60px auto;
     max-width: 1400px;
-
 }
+
 .golpes {
     background-color: #F8D030;
-    width: 300px;
-    margin-top: 30px;
-    display: flex; /* Ativa o Flexbox */
-    justify-content: space-between; /* Espaça os itens horizontalmente */
-    padding: 10px; /* Adiciona espaçamento interno */
-    height: 200px;  
-    text-align: center;
+    width: 320px; /* Aumentado levemente para caber a descrição */
+    min-height: 220px;
+    padding: 15px;
+    border: 3px solid #000;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.golpes_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.golpes h3 {
+    margin: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 24px;
 }
 
 .check {
-    position: relative; /* Remove o position absolute */
-    margin-right: 10px; /* Espaçamento entre a checkbox e o nome */
+    margin: 0;
     accent-color: #0c0d0d;
-    height: 30px; /* Adjust size as needed */
-    width: 30px;  /* Adjust size as needed */
-}
-
-.golpes h3 {
-    flex-grow: 1; /* Faz o nome do golpe ocupar o espaço restante */
-    text-align: center; /* Garante alinhamento à esquerda */
-    margin-top: 0; /* Remove margens padrão */
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 30px;
-    margin-left: 10px;
-    
-
+    height: 25px;
+    width: 25px;
 }
 
 .dmg_class {
-    width: 40px;
-    height: 40px;
-    margin-left: 10px; /* Espaçamento entre o nome e o ícone */
+    width: 35px;
+    height: auto;
 }
-.info_golpe{
-align-items: center;
-display: flex; /* Transforma a div em um contêiner flexível */
-flex-direction: row; /* Garante o alinhamento horizontal (padrão) */
-justify-content: center; /* (Opcional) Centraliza horizontalmente */
-gap: 10px; /* (Opcional) Adiciona espaçamento entre os elementos */
-margin-left: -300px;
-  
+.info_golpe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.info_golpe span {
+    font-weight: bold;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 2px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.info_golpe p {
+    margin: 2px 0;
+    font-size: 18px;
+}
+.tipo {
+    font-weight: bold;
+    background: rgba(255,255,255,0.3);
+    padding: 2px 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.stats_row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+.stats_row p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Descrição menor abaixo */
+.descricao {
+    margin: 5px 0 0 0;
+    font-size: 13px; /* Tamanho menor */
+    line-height: 1.2;
+    color: #333;
+    text-align: center;
+    font-family: "Pixelify Sans", sans-serif;
+    
 }
