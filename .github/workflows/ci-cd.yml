@@ -1,0 +1,66 @@
+name: CI e CD - Pokemon Battle
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: Validar e testar
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout do projeto
+        uses: actions/checkout@v6
+      - name: Configurar Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      # O projeto e os testes usam apenas recursos nativos; não há pacotes a instalar.
+      - name: Validar JavaScript e arquivos locais das páginas
+        run: node scripts/validate.mjs
+      - name: Testar seleção e navegação com APIs simuladas
+        run: node --test
+      - name: Preparar arquivos de publicação
+        run: node scripts/build.mjs
+      - name: Validar o site preparado
+        run: node scripts/validate.mjs _site
+      - name: Armazenar o site validado
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    name: Publicar no GitHub Pages
+    needs: ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Publicar artefato aprovado na CI
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Conferir páginas publicadas
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          for page in index.html golpes.html luta.html; do
+            curl --fail --silent --show-error --retry 6 --retry-all-errors --retry-delay 5 "${SITE_URL}${page}" -o /dev/null
+          done

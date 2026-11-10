@@ -306,7 +306,9 @@ const createPokemonCard = (poke) => {
     pokeContainer.appendChild(card)
 }
 
-fetchPokemons()
+if (pokeContainer) {
+    fetchPokemons().catch(erro => console.error("Erro ao carregar Pokémon:", erro));
+}
 
 
 
@@ -314,9 +316,12 @@ fetchPokemons()
 
 
 
-info();
-buscarNaTCG();
-carregar_golpes();
+// Este script é compartilhado: inicializa somente os elementos da tela atual.
+if (document.getElementById("gp_container") && localStorage.getItem("player")) {
+    info().catch(erro => console.error("Erro ao carregar informações:", erro));
+    buscarNaTCG();
+    carregar_golpes();
+}
 
 
 
