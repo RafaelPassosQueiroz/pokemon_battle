@@ -12,11 +12,31 @@ async function chamarApi() {
 }
 
 
+async function carregar_golpes() {
+    try{
+        const resp1 = await fetch('https://pokeapi.co/api/v2/pokemon/pikachu');
+        // Faz a requisição para a API do Pokémon (pok_pla) acessando assim os dados via API
+
+        const dados1 = await resp1.json();
+        //Transforma a resposta (resp1) em um objeto JSON (dados1) para podermos acessar os dados via JSON
+
+        moves_name = dados1.moves[0].move.name; 
+        //Determina que o dado procurado é o nome do movimento e armazena esse nome na variável moves_name
+
+        qtd_moves = dados1.moves.length;
+
+        console.log("Quantidade de movimentos: " + qtd_moves);
+        //Acessa o elemento HTML (main_ti) e substitui pelo nome do movimento (moves_name)
+
+        moves_name = dados1.moves[0].move.name; 
 
 
-        //Lógica de DANO
 
-
+    }catch (erro) {
+        console.error("Erro:", erro);
+    }
+}
+carregar_golpes();
 
 
 
